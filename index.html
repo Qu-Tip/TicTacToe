@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="theme-selector">
+        <select id="themeSelect" onchange="handleThemeChange(event)">
+            <option value="default">Default</option>
+            <option value="sky">Sky</option>
+            <option value="night">Night</option>
+            <option value="demon-slayer">Demon Slayer</option>
+            <option value="snorlax">Snorlax</option>
+            <option value="hogwarts">Piertotum Locomotor</option>
+        </select>
+    </div>
+
+    <div id="cloudContainer"></div>
+    <div id="moonContainer"></div>
+    <div id="starContainer"></div>
+    
+    <div class = "board" id = "board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+
+    <div class="scoreboard" id = "scoreboard">
+        <h2>Scoreboard</h2>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>X (You)</td>
+                <td id="score-x">0</td>
+            </tr>
+            <tr>
+                <td>O (Computer)</td>
+                <td id="score-o">0</td>
+            </tr>
+        </table>
+        <button id="resetScoreButton">Reset Score</button>
+    </div>
+
+    <div class="winning-message" id = "winningMessage">
+        <div data-winning-message-text></div>
+        <button id = "restartButton">Restart</button>
+    </div>
+</body>
+</html>
